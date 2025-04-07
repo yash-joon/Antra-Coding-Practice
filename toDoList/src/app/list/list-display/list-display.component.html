@@ -1,0 +1,12 @@
+
+<form >
+    <ul>
+        <li *ngFor="let item of listElements()">
+            <input type="checkbox" name ="{{item}}" value="{{item}}" (change)="addToRemove($event)">
+            {{item}}
+        </li>
+    </ul>
+    
+    <button (click)="remove()">Remove Selected Items </button>
+</form>
+

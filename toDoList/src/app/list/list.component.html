@@ -1,0 +1,5 @@
+<form>
+<label>Type Items</label>
+<input name="enterName" type="text" [(ngModel)]="taskElement" (keyup.enter)="addElement()">
+</form>
+<app-list-display [listElements]="listElements"></app-list-display>
