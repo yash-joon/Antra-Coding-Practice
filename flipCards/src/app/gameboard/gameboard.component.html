@@ -1,0 +1,21 @@
+<div class="boardContainer">
+
+    @for (item of gameCards; track $index) {
+        <div class="card" (click)="flipCard(item)">
+            <div class="cardDisplay">
+                @if(item.flipped || item.matched){
+                    {{item.emoji}}
+                }@else{
+                   <div class="blank"></div>
+                }
+            
+            
+            </div>
+        </div>
+    }
+
+</div>
+
+@if (gameStatus == false){
+    <button (click)="playAgain()">PLAY AGAIN</button>
+}
