@@ -1,0 +1,19 @@
+.navbarContainer{
+    width: 100%;
+    background-color: rgb(42, 189, 246);
+    padding: 1rem;
+    display: flex;
+    justify-content:left;
+    gap: 2rem;
+    
+    a{
+        
+        font-size: 2rem;
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover{
+        font-weight: bold;
+    }
+}

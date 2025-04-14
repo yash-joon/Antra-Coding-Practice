@@ -1,0 +1,9 @@
+@if(wishlist.length>0){
+    <h1>Wish list</h1>
+}
+@for (item of wishlist; track $index) {
+    <div>
+        {{item}}
+        <button (click)="removeItem(item)">X</button>
+    </div>
+}

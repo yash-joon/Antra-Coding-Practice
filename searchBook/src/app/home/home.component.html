@@ -1,0 +1,35 @@
+<div class="homeContainer">
+<form [formGroup]="form">
+    <input 
+    type="text" placeholder="Search Book" 
+    formControlName="search">
+</form>
+
+
+@for (book of books; track $index) {
+    <div class="book-card" (click)="addToWishList(book.volumeInfo.title)">
+    
+    @if(book.volumeInfo.imageLinks.smallThumbnail){
+        <img [src]="book.volumeInfo.imageLinks.smallThumbnail">
+    }
+    <div class="book-details">
+        @if(book.volumeInfo.title){
+            <p>{{book.volumeInfo.title}}</p>
+        }
+        @if(book.volumeInfo.publisher){
+            <p>{{book.volumeInfo.publisher}}</p>
+        }
+        @if(book.volumeInfo.publishedDate){
+            <p>{{book.volumeInfo.publishedDate}}</p>
+        }
+        @if(book.volumeInfo.description){
+            <p>{{book.volumeInfo.description}}</p>
+        }
+    </div>
+    
+    </div>
+}
+
+<app-wishlist-display [wishlist]="this.wishlist" (remove)="removeFromWishlist($event)"></app-wishlist-display>
+
+</div>
