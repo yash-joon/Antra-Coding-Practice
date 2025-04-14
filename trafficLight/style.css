@@ -1,0 +1,62 @@
+
+.trafficLight{
+    background-color: black;
+    border: solid black;
+    width: 7rem;
+    height: 20rem;
+}
+
+
+button{
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+
+.redLight{
+    animation: cycleRed 10s steps(1, start) infinite;
+}
+
+.yellowLight{
+    animation: cycleYellow 10s steps(1, start) infinite;
+}
+
+.greenLight{
+    animation: cycleGreen 10s steps(1, start) infinite;
+}
+
+
+@keyframes cycleRed {
+    0% {background-color: red;}
+    40% {background-color: red;}
+    41% {background-color: grey;}
+    100% {background-color: grey;}
+}
+
+
+@keyframes cycleYellow {
+    0% {background-color: grey;}
+    80%  { background-color: grey; }
+    81% {background-color: yellow;}
+    100% {background-color: yellow;}
+}
+
+
+
+@keyframes cycleGreen {
+    0% {background-color: grey;}
+    40% {background-color: grey;}
+    41% {background-color: green;}
+    80%  { background-color: green; }
+    81%  { background-color: grey; }
+    100% {background-color: grey;}
+}
+
+
+
+
