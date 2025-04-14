@@ -1,0 +1,8 @@
+@for (item of getArrayElementsAsGroups() ; track $index) {
+    
+   <div [formGroup]="item"> 
+    <input type="checkbox" formControlName="checked">
+    <label>{{item.get('text')?.value}}</label>
+    </div>
+
+}   

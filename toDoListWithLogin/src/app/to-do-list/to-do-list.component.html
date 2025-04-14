@@ -1,0 +1,13 @@
+<h1>Welcome {{username}}</h1>
+
+<form [formGroup]="listForm">
+    <label>Enter To Do </label>
+    <input type="text" formControlName='userInput'>
+    <button (click)="addToList()">Add to List</button>
+</form>
+
+<app-list-display [itemsDisplay]="items"></app-list-display>
+<br>
+<button (click)="deleteItems()">Delete Marked</button>
+<br>
+<button (click)="logOut()">Log Out</button>
